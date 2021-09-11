@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -62,6 +63,7 @@ public class BaseClass {
 		String PASSWORD = fLib.getPropertyKeyValue("password");
 		/*Login to application*/
 		LoginPage loginPage = new LoginPage(driver);
+		Reporter.log("PASS: Login page is displayed");
 		loginPage.loginToApp(USERNAME, PASSWORD);
 	}
 	

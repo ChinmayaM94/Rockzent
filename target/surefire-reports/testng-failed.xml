@@ -3,17 +3,18 @@
 <suite verbose="0" name="Failed suite [Command line suite]">
   <test thread-count="5" verbose="0" name="Command line test(failed)">
     <classes>
-      <class name="com.rockzent.awinbv.leadtest.CreateNewLeadTest">
+      <class name="com.rockzent.awinbv.leadtest.ConvertLeadTest">
         <methods>
-          <include name="creatNewLeadByInvalidAnnualRevenueTest"/>
+          <include name="convertLeadBySelectingOnlyOrgCheckboxTest"/>
           <include name="configAS"/>
           <include name="configAC"/>
           <include name="configBS"/>
           <include name="configBC"/>
           <include name="configAM"/>
+          <include name="convertLeadBySelectingOnlyOpportunityCheckboxTest"/>
           <include name="configBM"/>
         </methods>
-      </class> <!-- com.rockzent.awinbv.leadtest.CreateNewLeadTest -->
+      </class> <!-- com.rockzent.awinbv.leadtest.ConvertLeadTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

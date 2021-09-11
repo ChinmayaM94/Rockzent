@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -30,10 +31,10 @@ public class CreateNewLeadTest extends BaseClass {
 		String partialHomeTitle = eLib.getDataFromExcel("LeadsModule", 1, 2);
 		String createNewLeadText = eLib.getDataFromExcel("LeadsModule", 1, 3);
 		
-		
 		wLib.waitForTitleVisibility(driver);
 		boolean title = driver.getTitle().contains(partialHomeTitle);
-		Assert.assertTrue(title);
+		Assert.assertTrue(title, "Home page is not displayed,");
+		Reporter.log("PASS: Home page is displayed");
 		
 		//Step 3: Click on "Lead" then click on "Create Lead " Image.
 		HomePage homePage = new HomePage(driver);
@@ -44,7 +45,8 @@ public class CreateNewLeadTest extends BaseClass {
 		
 		//Step 4: Create lead
 		CreateNewLeadPage createLead = new CreateNewLeadPage(driver);
-		Assert.assertEquals(createLead.getCreateNewLeadHeader().getText(), createNewLeadText);
+		Assert.assertEquals(createLead.getCreateNewLeadHeader().getText(), createNewLeadText, "CreateNewLead page is not displayed,");
+		Reporter.log("PASS: CreateNewLead page is displayed");
 		
 		createLead.getLastNameEdt().sendKeys(lastName);
 		createLead.getCompanyEdt().sendKeys(companyName);
@@ -54,23 +56,27 @@ public class CreateNewLeadTest extends BaseClass {
 		createLead.getGroupRadioBtn().click();
 		List<WebElement> groupDpDownList = wLib.selectOptions(createLead.getGroupDropDownList());
 		SoftAssert soft = new SoftAssert();
-		soft.assertTrue(createLead.clickOnAssignedToRadioBtn(expectedGroupDpDownOptions, groupDpDownList));
+		soft.assertTrue(createLead.clickOnAssignedToRadioBtn(expectedGroupDpDownOptions, groupDpDownList), "Expected options are present in Group dropdown,");
+		Reporter.log("PASS: Expected options are present in Group dropdown");
 		
 		/*verifying User dropdown options*/
 		List<String> expectedUserDpDownOptions = Arrays.asList(userOption);
 		createLead.getUserRadioBtn().click();
 		List<WebElement> userDpDownList = wLib.selectOptions(createLead.getUserDropDownList());
-		soft.assertTrue(createLead.clickOnAssignedToRadioBtn(expectedUserDpDownOptions, userDpDownList));
+		soft.assertTrue(createLead.clickOnAssignedToRadioBtn(expectedUserDpDownOptions, userDpDownList), "Expected options are present in User dropdown,");
+		Reporter.log("PASS: Expected options are present in User dropdown");
 		createLead.getSaveBtn().click();
 		
 		//verify the success Msg with lastname
 		LeadInfoPage leadInfo = new LeadInfoPage(driver);
 		boolean isLeadCreated = leadInfo.getSuccessfulMsg().getText().contains(lastName);
-		Assert.assertTrue(isLeadCreated);
+		Assert.assertTrue(isLeadCreated, "New Lead is not created,");
+		Reporter.log("PASS: New Lead is created");
 		
 		//verify unique lead no is generated or not
 		boolean isLeadNoGenerated = !leadInfo.getUniqueLeadNo().getText().isEmpty();
-		soft.assertTrue(isLeadNoGenerated);
+		soft.assertTrue(isLeadNoGenerated, "Unique LeadNo is not generated,");
+		Reporter.log("PASS: Unique LeadNo is generated");
 		soft.assertAll();
 	}
 	
@@ -87,7 +93,8 @@ public class CreateNewLeadTest extends BaseClass {
 		SoftAssert soft = new SoftAssert();
 		wLib.waitForTitleVisibility(driver);
 		boolean title = driver.getTitle().contains(partialHomeTitle);
-		Assert.assertTrue(title);
+		Assert.assertTrue(title, "Home page is not displayed,");
+		Reporter.log("PASS: Home page is displayed");
 		
 		//Step 3: Click on "Lead" then click on "Create Lead " Image.
 		HomePage homePage = new HomePage(driver);
@@ -98,18 +105,21 @@ public class CreateNewLeadTest extends BaseClass {
 		
 		//Step 4: Create lead with valid Annual Revenue
 		CreateNewLeadPage createLead = new CreateNewLeadPage(driver);
-		Assert.assertEquals(createLead.getCreateNewLeadHeader().getText(), createNewLeadText);
+		Assert.assertEquals(createLead.getCreateNewLeadHeader().getText(), createNewLeadText, "CreateNewLead page is not displayed,");
+		Reporter.log("PASS: CreateNewLead page is displayed");
 		
 		createLead.createNewLeadByAnnualRevenue(lastName, companyName, annualRevenue);
 		
 		//verify the success Msg with lastname
 		LeadInfoPage leadInfo = new LeadInfoPage(driver);
 		boolean isLeadCreated = leadInfo.getSuccessfulMsg().getText().contains(lastName);
-		Assert.assertTrue(isLeadCreated);
+		Assert.assertTrue(isLeadCreated, "New Lead is not created,");
+		Reporter.log("PASS: New Lead is created");
 		
 		//verify unique lead no is generated or not
 		boolean isLeadNoGenerated = !leadInfo.getUniqueLeadNo().getText().isEmpty();
-		soft.assertTrue(isLeadNoGenerated);
+		soft.assertTrue(isLeadNoGenerated, "Unique LeadNo is not generated,");
+		Reporter.log("PASS: Unique LeadNo is generated");
 		soft.assertAll();
 	}
 	
@@ -126,7 +136,8 @@ public class CreateNewLeadTest extends BaseClass {
 		
 		wLib.waitForTitleVisibility(driver);
 		boolean title = driver.getTitle().contains(partialHomeTitle);
-		Assert.assertTrue(title);
+		Assert.assertTrue(title, "Home page is not displayed,");
+		Reporter.log("PASS: Home page is displayed");
 		
 		//Step 3: Click on "Lead" then click on "Create Lead " Image.
 		HomePage homePage = new HomePage(driver);
@@ -137,13 +148,15 @@ public class CreateNewLeadTest extends BaseClass {
 		
 		//Step 4: Create lead with invalid Annual Revenue
 		CreateNewLeadPage createLead = new CreateNewLeadPage(driver);
-		Assert.assertEquals(createLead.getCreateNewLeadHeader().getText(), createNewLeadText);
+		Assert.assertEquals(createLead.getCreateNewLeadHeader().getText(), createNewLeadText, "CreateNewLead page is not displayed,");
+		Reporter.log("PASS: CreateNewLead page is displayed");
 		
 		createLead.createNewLeadByAnnualRevenue(lastName, companyName, annualRevenue);
 		
 		try {
 			boolean isAlertPresent = wLib.getAlertText(driver).equals(expectedErrorMsg);
-			Assert.assertTrue(isAlertPresent);
+			Assert.assertTrue(isAlertPresent, "\"Invalid Annual Revenue\" error message is not displayed and Lead is created,");
+			Reporter.log("PASS: \"Invalid Annual Revenue\" error message is displayed and Lead is not created");
 			wLib.acceptAlert(driver);
 		} catch (Exception e) {
 			LeadInfoPage leaddInfo = new LeadInfoPage(driver);

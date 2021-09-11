@@ -1,6 +1,7 @@
 package com.rockzent.awinbv.leadtest;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -25,8 +26,9 @@ public class ConvertLeadTest extends BaseClass {
 		String expectedOrgTitle = eLib.getDataFromExcel("LeadsModule", 10, 6);
 		
 		wLib.waitForTitleVisibility(driver);
-		boolean isHomePageDisplayed = driver.getTitle().contains(partialHomeTitle);
-		Assert.assertTrue(isHomePageDisplayed);
+		boolean title = driver.getTitle().contains(partialHomeTitle);
+		Assert.assertTrue(title, "Home page is not displayed,");
+		Reporter.log("PASS: Home page is displayed");
 		
 		/*Click on "Lead" and select a lead*/
 		HomePage homePage = new HomePage(driver);
@@ -45,18 +47,21 @@ public class ConvertLeadTest extends BaseClass {
 		leadPage.selectALead(updatedLastName);
 		
 		boolean isLeadInfoPage = infoPage.getSuccessfulMsg().getText().contains(updatedLastName);
-		Assert.assertTrue(isLeadInfoPage);
+		Assert.assertTrue(isLeadInfoPage, "LeadInfoPage is not displayed,");
+		Reporter.log("PASS: LeadInfoPage is displayed");
 		
 		/*Goto "Action" and click on "Convert Lead" link*/
 		infoPage.getConvertLeadLink().click();
 		boolean isConvertLeadPage = infoPage.getConvertLeadHeader().isDisplayed();
-		Assert.assertTrue(isConvertLeadPage);
+		Assert.assertTrue(isConvertLeadPage, "Convert Lead Page is not displayed,");
+		Reporter.log("PASS: Convert Lead Page is displayed");
 		
 		/*Select All the checkbok and fill all the mandatory fields and click on "Save"*/
 		infoPage.getOpportunityCheckBox().click();
 		infoPage.getOpportunityCloseDate().sendKeys(closeDate);
 		infoPage.getConvertLeadSaveBtn().click();
-		Assert.assertTrue(driver.getTitle().contains(expectedOrgTitle));
+		Assert.assertTrue(driver.getTitle().contains(expectedOrgTitle), "Organization Page is not displayed,");
+		Reporter.log("PASS: Organization Page is displayed");
 	}
 	
 	/*TC_23*/
@@ -69,8 +74,9 @@ public class ConvertLeadTest extends BaseClass {
 		String expectedAlertText = eLib.getDataFromExcel("LeadsModule", 13, 5);
 		
 		wLib.waitForTitleVisibility(driver);
-		boolean isHomePageDisplayed = driver.getTitle().contains(partialHomeTitle);
-		Assert.assertTrue(isHomePageDisplayed);
+		boolean title = driver.getTitle().contains(partialHomeTitle);
+		Assert.assertTrue(title, "Home page is not displayed,");
+		Reporter.log("PASS: Home page is displayed");
 		
 		/*Click on "Lead" and select a lead*/
 		HomePage homePage = new HomePage(driver);
@@ -89,12 +95,14 @@ public class ConvertLeadTest extends BaseClass {
 		leadPage.selectALead(updatedLastName);
 		
 		boolean isLeadInfoPage = infoPage.getSuccessfulMsg().getText().contains(updatedLastName);
-		Assert.assertTrue(isLeadInfoPage);
+		Assert.assertTrue(isLeadInfoPage, "LeadInfoPage is not displayed,");
+		Reporter.log("PASS: LeadInfoPage is displayed");
 		
 		/*Goto "Action" and click on "Convert Lead" link*/
 		infoPage.getConvertLeadLink().click();
 		boolean isConvertLeadPage = infoPage.getConvertLeadHeader().isDisplayed();
-		Assert.assertTrue(isConvertLeadPage);
+		Assert.assertTrue(isConvertLeadPage, "Convert Lead Page is not displayed,");
+		Reporter.log("PASS: Convert Lead Page is displayed");
 		
 		/*Select only "Organisation" checkbok and fill all the mandatory fielsand click on "Save"*/
 		if(!infoPage.getOrganizationsCheckBox().isSelected()) {
@@ -110,7 +118,8 @@ public class ConvertLeadTest extends BaseClass {
 		
 		try {
 			boolean isAlertTextCorrect = wLib.getAlertText(driver).contains(expectedAlertText);
-			Assert.assertTrue(isAlertTextCorrect);
+			Assert.assertTrue(isAlertTextCorrect, "\"Contact should be selected to transfer related records \" message is not displayed,");
+			Reporter.log("PASS: \"Contact should be selected to transfer related records \" message is displayed");
 			wLib.acceptAlert(driver);
 		} catch(Exception e) {
 			Assert.assertTrue(false);
@@ -128,8 +137,9 @@ public class ConvertLeadTest extends BaseClass {
 		String expectedAlertText = eLib.getDataFromExcel("LeadsModule", 16, 6);
 		
 		wLib.waitForTitleVisibility(driver);
-		boolean isHomePageDisplayed = driver.getTitle().contains(partialHomeTitle);
-		Assert.assertTrue(isHomePageDisplayed);
+		boolean title = driver.getTitle().contains(partialHomeTitle);
+		Assert.assertTrue(title, "Home page is not displayed,");
+		Reporter.log("PASS: Home page is displayed");
 		
 		/*Click on "Lead" and select a lead*/
 		HomePage homePage = new HomePage(driver);
@@ -148,12 +158,14 @@ public class ConvertLeadTest extends BaseClass {
 		leadPage.selectALead(updatedLastName);
 		
 		boolean isLeadInfoPage = infoPage.getSuccessfulMsg().getText().contains(updatedLastName);
-		Assert.assertTrue(isLeadInfoPage);
+		Assert.assertTrue(isLeadInfoPage, "LeadInfoPage is not displayed,");
+		Reporter.log("PASS: LeadInfoPage is displayed");
 		
 		/*Goto "Action" and click on "Convert Lead" link*/
 		infoPage.getConvertLeadLink().click();
 		boolean isConvertLeadPage = infoPage.getConvertLeadHeader().isDisplayed();
-		Assert.assertTrue(isConvertLeadPage);
+		Assert.assertTrue(isConvertLeadPage, "Convert Lead Page is not displayed,");
+		Reporter.log("PASS: Convert Lead Page is displayed");
 		
 		/*Select only "Opporunity" checkbok and fill all the mandatory fielsand click on "Save"*/
 		if(infoPage.getOrganizationsCheckBox().isSelected()) {
@@ -171,7 +183,8 @@ public class ConvertLeadTest extends BaseClass {
 		
 		try {
 			boolean isAlertTextCorrect = wLib.getAlertText(driver).contains(expectedAlertText);
-			Assert.assertTrue(isAlertTextCorrect);
+			Assert.assertTrue(isAlertTextCorrect, "\"Select either Organization or Contact to convert the lead\" message is not displayed,");
+			Reporter.log("PASS: \"Select either Organization or Contact to convert the lead\" message is displayed");
 			wLib.acceptAlert(driver);
 		} catch(Exception e) {
 			Assert.assertTrue(false);

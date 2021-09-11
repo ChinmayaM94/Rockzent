@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Command_line_suite">
-              <span class="suite-name border-failed">Command line suite</span>
+              <span class="suite-name border-skipped">Command line suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 1 failed,  2 skipped,  5 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods failed suite-Command_line_suite"> (hide)</a> <!-- hide-methods failed suite-Command_line_suite -->
-                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods failed suite-Command_line_suite"> (show)</a> <!-- show-methods failed suite-Command_line_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Command_line_suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.rockzent.awinbv.leadtest.CreateNewLeadTest" hash-for-method="creatNewLeadByInvalidAnnualRevenueTest">creatNewLeadByInvalidAnnualRevenueTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Command_line_suite -->
+                    <span class="method-stats">9 methods,  3 skipped,  6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Retried methods</span>
@@ -118,12 +104,17 @@
                     <div class="method-list-content skipped suite-Command_line_suite">
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.rockzent.awinbv.leadtest.CreateNewLeadTest" hash-for-method="creatNewLeadByInvalidAnnualRevenueTest">creatNewLeadByInvalidAnnualRevenueTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.rockzent.awinbv.leadtest.ConvertLeadTest" hash-for-method="convertLeadBySelectingOnlyOpportunityCheckboxTest">convertLeadBySelectingOnlyOpportunityCheckboxTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.rockzent.awinbv.leadtest.CreateNewLeadTest" hash-for-method="creatNewLeadByInvalidAnnualRevenueTest">creatNewLeadByInvalidAnnualRevenueTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.rockzent.awinbv.leadtest.ConvertLeadTest" hash-for-method="convertLeadBySelectingOnlyOpportunityCheckboxTest">convertLeadBySelectingOnlyOpportunityCheckboxTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.rockzent.awinbv.leadtest.ConvertLeadTest" hash-for-method="convertLeadBySelectingOnlyOrgCheckboxTest">convertLeadBySelectingOnlyOrgCheckboxTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Command_line_suite -->
@@ -152,6 +143,11 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.rockzent.awinbv.leadtest.CreateNewLeadTest" hash-for-method="creatNewLeadByInvalidAnnualRevenueTest">creatNewLeadByInvalidAnnualRevenueTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="com.rockzent.awinbv.leadtest.CreateNewLeadTest" hash-for-method="creatNewLeadByValidAnnualRevenueTest">creatNewLeadByValidAnnualRevenueTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -172,53 +168,117 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Command_line_suite" class="panel Command_line_suite">
-          <div class="suite-Command_line_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.rockzent.awinbv.leadtest.CreateNewLeadTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="creatNewLeadByInvalidAnnualRevenueTest">
-                  </a> <!-- creatNewLeadByInvalidAnnualRevenueTest -->
-                  <span class="method-name">creatNewLeadByInvalidAnnualRevenueTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at com.rockzent.awinbv.leadtest.CreateNewLeadTest.creatNewLeadByInvalidAnnualRevenueTest(CreateNewLeadTest.java:151)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 41 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-failed -->
           <div class="suite-Command_line_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">com.rockzent.awinbv.leadtest.CreateNewLeadTest</span>
+              <span class="class-name">com.rockzent.awinbv.leadtest.ConvertLeadTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="creatNewLeadByInvalidAnnualRevenueTest">
-                  </a> <!-- creatNewLeadByInvalidAnnualRevenueTest -->
-                  <span class="method-name">creatNewLeadByInvalidAnnualRevenueTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at com.rockzent.awinbv.leadtest.CreateNewLeadTest.creatNewLeadByInvalidAnnualRevenueTest(CreateNewLeadTest.java:151)
+                  <a name="convertLeadBySelectingOnlyOpportunityCheckboxTest">
+                  </a> <!-- convertLeadBySelectingOnlyOpportunityCheckboxTest -->
+                  <span class="method-name">convertLeadBySelectingOnlyOpportunityCheckboxTest</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=93.0.4577.63)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CHINNUBOSS&apos;, ip: &apos;192.168.72.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\murth\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52526}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fe347149cf95f57e2fb7358d31978f5
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy12.getAttribute(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.getAttributeOrCssValue(ExpectedConditions.java:1139)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$38.apply(ExpectedConditions.java:1084)
+	at org.openqa.selenium.support.ui.ExpectedConditions$38.apply(ExpectedConditions.java:1079)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at com.rockzent.awinbv.generalUtility.WebDriverUtility.waitForAttributeValue(WebDriverUtility.java:71)
+	at com.rockzent.awinbv.pomrepositorylib.LeadsPage.selectALead(LeadsPage.java:94)
+	at com.rockzent.awinbv.leadtest.ConvertLeadTest.convertLeadBySelectingOnlyOpportunityCheckboxTest(ConvertLeadTest.java:148)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 41 stack frames
+... Removed 44 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="creatNewLeadByInvalidAnnualRevenueTest">
-                  </a> <!-- creatNewLeadByInvalidAnnualRevenueTest -->
-                  <span class="method-name">creatNewLeadByInvalidAnnualRevenueTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at com.rockzent.awinbv.leadtest.CreateNewLeadTest.creatNewLeadByInvalidAnnualRevenueTest(CreateNewLeadTest.java:151)
+                  <a name="convertLeadBySelectingOnlyOpportunityCheckboxTest">
+                  </a> <!-- convertLeadBySelectingOnlyOpportunityCheckboxTest -->
+                  <span class="method-name">convertLeadBySelectingOnlyOpportunityCheckboxTest</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=93.0.4577.63)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CHINNUBOSS&apos;, ip: &apos;192.168.72.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\murth\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52526}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fe347149cf95f57e2fb7358d31978f5
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy12.getAttribute(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.getAttributeOrCssValue(ExpectedConditions.java:1139)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$38.apply(ExpectedConditions.java:1084)
+	at org.openqa.selenium.support.ui.ExpectedConditions$38.apply(ExpectedConditions.java:1079)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at com.rockzent.awinbv.generalUtility.WebDriverUtility.waitForAttributeValue(WebDriverUtility.java:71)
+	at com.rockzent.awinbv.pomrepositorylib.LeadsPage.selectALead(LeadsPage.java:94)
+	at com.rockzent.awinbv.leadtest.ConvertLeadTest.convertLeadBySelectingOnlyOpportunityCheckboxTest(ConvertLeadTest.java:148)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 41 stack frames
+... Removed 44 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="convertLeadBySelectingOnlyOrgCheckboxTest">
+                  </a> <!-- convertLeadBySelectingOnlyOrgCheckboxTest -->
+                  <span class="method-name">convertLeadBySelectingOnlyOrgCheckboxTest</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=93.0.4577.63)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;CHINNUBOSS&apos;, ip: &apos;192.168.72.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\murth\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52526}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fe347149cf95f57e2fb7358d31978f5
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy12.getAttribute(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.getAttributeOrCssValue(ExpectedConditions.java:1139)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$38.apply(ExpectedConditions.java:1084)
+	at org.openqa.selenium.support.ui.ExpectedConditions$38.apply(ExpectedConditions.java:1079)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at com.rockzent.awinbv.generalUtility.WebDriverUtility.waitForAttributeValue(WebDriverUtility.java:71)
+	at com.rockzent.awinbv.pomrepositorylib.LeadsPage.selectALead(LeadsPage.java:94)
+	at com.rockzent.awinbv.leadtest.ConvertLeadTest.convertLeadBySelectingOnlyOrgCheckboxTest(ConvertLeadTest.java:89)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 44 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -230,6 +290,13 @@
               <span class="class-name">com.rockzent.awinbv.leadtest.CreateNewLeadTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="creatNewLeadByInvalidAnnualRevenueTest">
+                  </a> <!-- creatNewLeadByInvalidAnnualRevenueTest -->
+                  <span class="method-name">creatNewLeadByInvalidAnnualRevenueTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="creatNewLeadByValidAnnualRevenueTest">
@@ -363,44 +430,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(9);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'convertLeadBySelectingAllCheckboxTest')
 data.setCell(0, 2, 'com.rockzent.awinbv.leadtest.ConvertLeadTest')
-data.setCell(0, 3, 38068);
+data.setCell(0, 3, 50119);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'convertLeadBySelectingOnlyOrgCheckboxTest')
+data.setCell(1, 1, 'convertLeadBySelectingOnlyOpportunityCheckboxTest')
 data.setCell(1, 2, 'com.rockzent.awinbv.leadtest.ConvertLeadTest')
-data.setCell(1, 3, 33393);
+data.setCell(1, 3, 43802);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'convertLeadBySelectingOnlyOpportunityCheckboxTest')
+data.setCell(2, 1, 'convertLeadBySelectingOnlyOrgCheckboxTest')
 data.setCell(2, 2, 'com.rockzent.awinbv.leadtest.ConvertLeadTest')
-data.setCell(2, 3, 32944);
+data.setCell(2, 3, 40080);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'creatNewLeadByValidAnnualRevenueTest')
-data.setCell(3, 2, 'com.rockzent.awinbv.leadtest.CreateNewLeadTest')
-data.setCell(3, 3, 10170);
+data.setCell(3, 1, 'convertLeadBySelectingOnlyOpportunityCheckboxTest')
+data.setCell(3, 2, 'com.rockzent.awinbv.leadtest.ConvertLeadTest')
+data.setCell(3, 3, 28421);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'createNewLeadByAssignToTest')
-data.setCell(4, 2, 'com.rockzent.awinbv.leadtest.CreateNewLeadTest')
-data.setCell(4, 3, 10130);
+data.setCell(4, 1, 'convertLeadBySelectingOnlyOrgCheckboxTest')
+data.setCell(4, 2, 'com.rockzent.awinbv.leadtest.ConvertLeadTest')
+data.setCell(4, 3, 25883);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'creatNewLeadByInvalidAnnualRevenueTest')
-data.setCell(5, 2, 'com.rockzent.awinbv.leadtest.CreateNewLeadTest')
-data.setCell(5, 3, 10041);
+data.setCell(5, 1, 'convertLeadBySelectingOnlyOpportunityCheckboxTest')
+data.setCell(5, 2, 'com.rockzent.awinbv.leadtest.ConvertLeadTest')
+data.setCell(5, 3, 24988);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'creatNewLeadByInvalidAnnualRevenueTest')
+data.setCell(6, 1, 'creatNewLeadByValidAnnualRevenueTest')
 data.setCell(6, 2, 'com.rockzent.awinbv.leadtest.CreateNewLeadTest')
-data.setCell(6, 3, 9865);
+data.setCell(6, 3, 12609);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'creatNewLeadByInvalidAnnualRevenueTest')
+data.setCell(7, 1, 'createNewLeadByAssignToTest')
 data.setCell(7, 2, 'com.rockzent.awinbv.leadtest.CreateNewLeadTest')
-data.setCell(7, 3, 9771);
+data.setCell(7, 3, 12325);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'creatNewLeadByInvalidAnnualRevenueTest')
+data.setCell(8, 2, 'com.rockzent.awinbv.leadtest.CreateNewLeadTest')
+data.setCell(8, 3, 8981);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -442,127 +513,137 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">configBC</span>
-                <span class="method-start">211 ms</span>
+                <span class="method-start">258 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">configBM</span>
-                <span class="method-start">5004 ms</span>
+                <span class="method-start">4358 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">convertLeadBySelectingAllCheckboxTest</span>
-                <span class="method-start">8002 ms</span>
+                <span class="method-start">7724 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM</span>
-                <span class="method-start">46079 ms</span>
+                <span class="method-start">57859 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">configBM</span>
-                <span class="method-start">47391 ms</span>
+                <span class="method-start">64149 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">convertLeadBySelectingOnlyOpportunityCheckboxTest</span>
-                <span class="method-start">49775 ms</span>
+                <span class="method-start">66346 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM</span>
-                <span class="method-start">82721 ms</span>
+                <span class="method-start">94768 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">configBM</span>
-                <span class="method-start">84155 ms</span>
+                <span class="method-start">101165 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">convertLeadBySelectingOnlyOrgCheckboxTest</span>
-                <span class="method-start">86401 ms</span>
+                <span class="method-name">convertLeadBySelectingOnlyOpportunityCheckboxTest</span>
+                <span class="method-start">103696 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM</span>
-                <span class="method-start">119795 ms</span>
+                <span class="method-start">128684 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">133538 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">convertLeadBySelectingOnlyOpportunityCheckboxTest</span>
+                <span class="method-start">136028 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">179830 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">183754 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">convertLeadBySelectingOnlyOrgCheckboxTest</span>
+                <span class="method-start">187619 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">213503 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">215014 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">convertLeadBySelectingOnlyOrgCheckboxTest</span>
+                <span class="method-start">217831 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">257912 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">configAC</span>
-                <span class="method-start">121243 ms</span>
+                <span class="method-start">259394 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.rockzent.awinbv.leadtest.CreateNewLeadTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">configBC</span>
-                <span class="method-start">122012 ms</span>
+                <span class="method-start">260250 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">configBM</span>
-                <span class="method-start">125443 ms</span>
+                <span class="method-start">263063 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">creatNewLeadByInvalidAnnualRevenueTest</span>
-                <span class="method-start">128194 ms</span>
+                <span class="method-start">267018 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM</span>
-                <span class="method-start">138236 ms</span>
+                <span class="method-start">275999 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">configBM</span>
-                <span class="method-start">139558 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">creatNewLeadByInvalidAnnualRevenueTest</span>
-                <span class="method-start">141931 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">configAM</span>
-                <span class="method-start">151702 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">configBM</span>
-                <span class="method-start">153104 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">creatNewLeadByInvalidAnnualRevenueTest</span>
-                <span class="method-start">155520 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">configAM</span>
-                <span class="method-start">165599 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">configBM</span>
-                <span class="method-start">167017 ms</span>
+                <span class="method-start">277570 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">creatNewLeadByValidAnnualRevenueTest</span>
-                <span class="method-start">169297 ms</span>
+                <span class="method-start">280631 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM</span>
-                <span class="method-start">179467 ms</span>
+                <span class="method-start">293241 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">configBM</span>
-                <span class="method-start">180872 ms</span>
+                <span class="method-start">294760 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createNewLeadByAssignToTest</span>
-                <span class="method-start">183192 ms</span>
+                <span class="method-start">297866 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM</span>
-                <span class="method-start">193322 ms</span>
+                <span class="method-start">310192 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">configAC</span>
-                <span class="method-start">194720 ms</span>
+                <span class="method-start">311777 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.rockzent.awinbv.leadtest.ConvertLeadTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">configAS</span>
-                <span class="method-start">195901 ms</span>
+                <span class="method-start">313028 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
