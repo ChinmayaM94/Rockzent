@@ -4,13 +4,13 @@
 
   <test thread-count="5" name="TestRunner-1">
     <classes>
-      <class name="com.vtiger.comcast.leadtest.ConvertLeadTest"/>
+      <class name="com.awinbv.rockzent.leadtest.ConvertLeadTest"/>
     </classes>
   </test> <!-- Test -->
   
   <test thread-count="5" name="TestRunner-2">
     <classes>
-      <class name="com.vtiger.comcast.leadtest.CreateNewLeadTest"/>
+      <class name="com.awinbv.rockzent.leadtest.CreateNewLeadTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

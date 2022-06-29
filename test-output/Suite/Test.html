@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jun 21 15:28:41 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>70 seconds (70862 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.awinbv.rockzent.leadtest.CreateNewLeadTest.creatNewLeadByInvalidAnnualRevenueTest()'><b>creatNewLeadByInvalidAnnualRevenueTest</b><br>Test class: com.awinbv.rockzent.leadtest.CreateNewLeadTest<br/>
+<a href="#Output-1506648430" onClick='toggleBox("Output-1506648430", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1506648430" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1506648430">
+PASS: Home page is displayed<br/>
+PASS: CreateNewLead page is displayed<br/>
+PASS: "Invalid Annual Revenue" error message is displayed and Lead is not created<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>com.awinbv.rockzent.leadtest.CreateNewLeadTest@52f759d7</td></tr>
+<tr>
+<td title='com.awinbv.rockzent.leadtest.ConvertLeadTest.convertLeadBySelectingOnlyOrgCheckboxTest()'><b>convertLeadBySelectingOnlyOrgCheckboxTest</b><br>Test class: com.awinbv.rockzent.leadtest.ConvertLeadTest<br/>
+<a href="#Output-1415937490" onClick='toggleBox("Output-1415937490", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1415937490" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1415937490">
+PASS: Home page is displayed<br/>
+PASS: LeadInfoPage is displayed<br/>
+PASS: Convert Lead Page is displayed<br/>
+PASS: "Contact should be selected to transfer related records " message is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>com.awinbv.rockzent.leadtest.ConvertLeadTest@8646db9</td></tr>
+<tr>
+<td title='com.awinbv.rockzent.leadtest.ConvertLeadTest.convertLeadBySelectingAllCheckboxTest()'><b>convertLeadBySelectingAllCheckboxTest</b><br>Test class: com.awinbv.rockzent.leadtest.ConvertLeadTest<br/>
+<a href="#Output-10001825" onClick='toggleBox("Output-10001825", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-10001825" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-10001825">
+PASS: Home page is displayed<br/>
+PASS: LeadInfoPage is displayed<br/>
+PASS: Convert Lead Page is displayed<br/>
+PASS: Organization Page is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>com.awinbv.rockzent.leadtest.ConvertLeadTest@8646db9</td></tr>
+<tr>
+<td title='com.awinbv.rockzent.leadtest.CreateNewLeadTest.creatNewLeadByValidAnnualRevenueTest()'><b>creatNewLeadByValidAnnualRevenueTest</b><br>Test class: com.awinbv.rockzent.leadtest.CreateNewLeadTest<br/>
+<a href="#Output-1405548909" onClick='toggleBox("Output-1405548909", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1405548909" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1405548909">
+PASS: Home page is displayed<br/>
+PASS: CreateNewLead page is displayed<br/>
+PASS: New Lead is created<br/>
+PASS: Unique LeadNo is generated<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>com.awinbv.rockzent.leadtest.CreateNewLeadTest@52f759d7</td></tr>
+<tr>
+<td title='com.awinbv.rockzent.leadtest.CreateNewLeadTest.createNewLeadByAssignToTest()'><b>createNewLeadByAssignToTest</b><br>Test class: com.awinbv.rockzent.leadtest.CreateNewLeadTest<br/>
+<a href="#Output-18928637" onClick='toggleBox("Output-18928637", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-18928637" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-18928637">
+PASS: Home page is displayed<br/>
+PASS: CreateNewLead page is displayed<br/>
+PASS: Expected options are present in Group dropdown<br/>
+PASS: Expected options are present in User dropdown<br/>
+PASS: New Lead is created<br/>
+PASS: Unique LeadNo is generated<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>com.awinbv.rockzent.leadtest.CreateNewLeadTest@52f759d7</td></tr>
+<tr>
+<td title='com.awinbv.rockzent.leadtest.ConvertLeadTest.convertLeadBySelectingOnlyOpportunityCheckboxTest()'><b>convertLeadBySelectingOnlyOpportunityCheckboxTest</b><br>Test class: com.awinbv.rockzent.leadtest.ConvertLeadTest<br/>
+<a href="#Output-363616706" onClick='toggleBox("Output-363616706", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-363616706" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-363616706">
+PASS: Home page is displayed<br/>
+PASS: LeadInfoPage is displayed<br/>
+PASS: Convert Lead Page is displayed<br/>
+PASS: "Select either Organization or Contact to convert the lead" message is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>com.awinbv.rockzent.leadtest.ConvertLeadTest@8646db9</td></tr>
+</table><p>
+</body>
+</html>
