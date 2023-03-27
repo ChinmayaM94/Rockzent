@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.awinbv.rockzent.leadtest.ObjectTest">
         <methods>
           <include name="objectTest"/>
         </methods>
       </class> <!-- com.awinbv.rockzent.leadtest.ObjectTest -->
+=======
+      <class name="com.awinbv.rockzent.leadtest.ExcelUtils">
+        <methods>
+          <include name="excelData"/>
+        </methods>
+      </class> <!-- com.awinbv.rockzent.leadtest.ExcelUtils -->
+>>>>>>> 8a3dfc95faf120d0955bb9f375d23daaec137461
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
